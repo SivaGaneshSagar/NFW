@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+  border: 0px;
+  margin: 0px;
+}
+
+/* universal */
+
+/* Button */
+
+button {
+  outline: none;
+}
+.btn {
+  height: 50px;
+  width: 150px;
+  border-radius: 2px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0);
+  padding: 13px 33px;
+  position: relative;
+  text-transform: uppercase;
+}
+.btn:hover {
+  color: rgb(63, 63, 63);
+}
+
+/* .fl-r {
+  float: right;
+} */
+
+/* Nav bar */
+nav {
+  height: 72px;
+
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+}
+
+.btn1 {
+  margin-right: 8%;
+  margin-top: 12px;
+}
+
+.container-main {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+video {
+  position: absolute;
+  display: block;
+}
+
+img {
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+.btn::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background-color: rgb(230, 230, 230);
+  z-index: -1;
+  transition: transform 300ms ease-in-out;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+.btn.btn1:hover::after,
+.btn.btn.btn1:focus::after {
+  transform: scaleX(1);
+  color: brown;
+}
+.btn.btn1 {
+  z-index: 1;
+  border: 2px solid rgb(255, 255, 255);
+}
+
+/* Hamburger */
+.burger {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid red;
+  height: 80px;
+  width: 6%;
+}
+.line {
+  background-color: white;
+  height: 4px;
+  width: 60px;
+  border-radius: 5px;
+  transition: all 0.5s ease-in-out;
+}
+.line::after,
+.line::before {
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: 60px;
+  transition: all 0.5s ease-in-out;
+  border-radius: 5px;
+  background-color: white;
+}
+.line::before {
+  transform: translateY(-16px);
+}
+.line::after {
+  transform: translateY(16px);
+}
+.burger.open .line {
+  transform: translateX(-30px);
+  background: transparent;
+}
+.burger.open .line::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+
+.burger.open .line::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+}
+header.active nav {
+  transition: all 1500ms ease-in-out;
+  background-color: red;
+}
+.testfade {
+  display: flex;
+  height: 300px;
+  width: 400px;
+  background-color: rgb(0, 255, 13);
+  position: relative;
+  top: 900px;
+}
+.container1 {
+  display: flex;
+  height: 2000px;
+  flex-direction: row;
+}
+.container1 div {
+  margin: 10px;
+}
